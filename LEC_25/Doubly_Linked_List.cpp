@@ -195,6 +195,27 @@ pair<node * , node *> deleteFromPos(node *head , node *tail , int pos){
 //  FIND MIDDLE ELEMENT
 
 // PROBLEM LINK : https://leetcode.com/problems/middle-of-the-linked-list/
+
+// OPTIMISED USING SLOW AND FAST pointer
+
+// TC -> O(N/2) 
+
+// class Solution {
+// public:
+//     ListNode* middleNode(ListNode* head) {
+//         ListNode* slow = head , *fast = head ;
+//         while(fast != NULL and fast -> next != NULL){
+//             fast = fast -> next -> next ;
+//             slow = slow -> next ;
+//         }
+//         return slow ;
+//     }
+// };
+
+
+
+// BRUTE FORCE
+
 // TC - > O(N + N/2)
 
 /**
@@ -231,7 +252,7 @@ pair<node * , node *> deleteFromPos(node *head , node *tail , int pos){
 //     }
 // };
 
-}
+//}
 int main(){
     pair<node *,node*> nn = insertAtBeg(NULL,NULL ,10) ;
     nn = insertAtBeg(nn.first , nn.second , 5) ;
